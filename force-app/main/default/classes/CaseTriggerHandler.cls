@@ -46,13 +46,12 @@ public class CaseTriggerHandler {
     // Count how many Case have the particular Contact
     Map<String, Integer> contactCount = new Map<String, Integer>();
     for (Case c : caseList) {
-      if (contactCount.containsKey(c.ContactId)) {
-        Integer count = contactCount.get(c.ContactId);
-      } else {
         Integer count = 0;
-      }
+        if (contactCount.containsKey(c.ContactId)) {
+            count = contactCount.get(c.ContactId);
+        }
 
-      contactCount.put(c.contactId, count + 1);
+        contactCount.put(c.contactId, count + 1);
 
     }
 
